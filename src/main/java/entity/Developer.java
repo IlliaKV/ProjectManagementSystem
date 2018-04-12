@@ -1,11 +1,28 @@
 package entity;
 
+import javax.persistence.*;
+
+@Table(name = "developer")
+@Entity
 public class Developer {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idDeveloper")
     private long    id;
+
+    @Column(name = "firstName")
     private String  firstName;
+
+    @Column(name = "lastName")
     private String  lastName;
+
+    @Column(name = "sex")
     private int     sex;
+
+    @Column(name = "age")
     private int     age;
+
+    @Column(name = "salary")
     private double  salary;
 
     public void setId(long id) {
